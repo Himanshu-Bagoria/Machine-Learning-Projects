@@ -2,6 +2,9 @@
 
 A machine learning application built with Python that classifies emails and SMS messages as spam or authentic using NLP techniques and various classification algorithms.
 
+live link
+https://e-mail-spam-detection-oh4b.onrender.com
+
 ## Features
 
 - **Natural Language Processing (NLP)**: Tokenization, stop-word removal, and stemming using NLTK
@@ -109,5 +112,6 @@ The application includes a sample dataset with labeled examples of spam and ham 
 4. Submit a pull request
 
 ## License
+
 
 This project is open source and available under the MIT License.
