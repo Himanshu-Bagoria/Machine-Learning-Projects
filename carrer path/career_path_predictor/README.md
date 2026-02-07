@@ -20,7 +20,8 @@ live link
   https://career-path-predictor.onrender.com
 
   📂 **Project Structure**
-career-path-predictor/
+ 
+  career-path-predictor/
 │── data/                # Sample dataset
 │── model/               # ML model training scripts
 │── app.py               # Main Streamlit app
