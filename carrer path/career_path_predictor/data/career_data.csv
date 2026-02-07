@@ -1,0 +1,33 @@
+education,skills,interests,career_path
+Bachelor,"Python,SQL,Statistics",Technology,Data Scientist
+Master,"Python,R,Machine Learning",Technology,Data Scientist
+PhD,"Python,Deep Learning,Research",Technology,Data Scientist
+Bachelor,"JavaScript,HTML,CSS",Technology,Web Developer
+Master,"JavaScript,React,Node.js",Technology,Web Developer
+Bachelor,"Java,Spring,SQL",Technology,Software Engineer
+Master,"Java,Cloud Computing,AWS",Technology,Software Engineer
+Bachelor,"Business Analysis,Excel,SQL",Business,Business Analyst
+Master,"Business Analysis,Python,Tableau",Business,Business Analyst
+Bachelor,"Marketing,Digital Marketing,Analytics",Business,Marketing Manager
+Master,"Marketing,Data Analysis,Strategy",Business,Marketing Manager
+Bachelor,"Python,AI,Machine Learning",Technology,AI Engineer
+Master,"Python,Deep Learning,NLP",Technology,AI Engineer
+PhD,"Python,Computer Vision,Research",Technology,AI Engineer
+Bachelor,"SQL,Tableau,Business Intelligence",Business,Business Analyst
+Master,"SQL,Power BI,Data Visualization",Business,Business Analyst
+Bachelor,"UI/UX Design,Prototyping,Research",Creative,UI/UX Designer
+Master,"UI/UX Design,User Research,Figma",Creative,UI/UX Designer
+Bachelor,"Content Writing,SEO,Social Media",Creative,Content Strategist
+Master,"Content Strategy,Brand Management",Creative,Content Strategist
+Bachelor,"Finance,Excel,Accounting",Business,Financial Analyst
+Master,"Finance,Python,Risk Management",Business,Financial Analyst
+Bachelor,"Project Management,Agile,Scrum",Business,Project Manager
+Master,"Project Management,PMP,Certification",Business,Project Manager
+Bachelor,"Cybersecurity,Network Security",Technology,Cybersecurity Analyst
+Master,"Cybersecurity,Ethical Hacking",Technology,Cybersecurity Analyst
+Bachelor,"Mobile Development,Android,iOS",Technology,Mobile Developer
+Master,"Mobile Development,React Native,Flutter",Technology,Mobile Developer
+Bachelor,"Cloud Computing,AWS,Azure",Technology,Cloud Engineer
+Master,"Cloud Computing,DevOps,Docker",Technology,Cloud Engineer
+Bachelor,"Digital Marketing,SEO,Analytics",Business,Digital Marketing Specialist
+Master,"Digital Marketing,PPC,Strategy",Business,Digital Marketing Specialist
