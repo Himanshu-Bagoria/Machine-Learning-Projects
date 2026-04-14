@@ -1,0 +1,252 @@
+/* CSS for Weather Forecast App */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --glass-background: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-blur: blur(10px);
+}
+
+/* Global Background for Streamlit App */
+.stApp {
+    transition: background 0.8s ease;
+}
+
+/* Base Card Style */
+.weather-card-container {
+    padding: 1.2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* Background Gradients for stApp */
+.stApp.sunny-bg { background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%); }
+.stApp.night-bg { background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); }
+.stApp.rainy-bg { background: linear-gradient(135deg, #606c88 0%, #3f4c6b 100%); }
+.stApp.cloudy-bg { background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%); }
+
+/* Global Animations (Fixed) */
+.rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+.drop {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    width: 2px;
+    height: 15px;
+    top: -20px;
+    animation: rain-fall 1s linear infinite;
+}
+@keyframes rain-fall {
+    to { transform: translateY(110vh); }
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle var(--duration) ease-in-out infinite;
+}
+
+.sun {
+    position: fixed;
+    top: 80px;
+    right: 15%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #ffcc33 0%, #ff6600 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ffcc33; /* Softer shine */
+    animation: sun-pulse 3s infinite alternate;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.7; /* More transparent */
+}
+
+.moon {
+    position: fixed;
+    top: 80px;
+    right: 15%;
+    width: 70px;
+    height: 70px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ffffff;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.clouds {
+    position: fixed;
+    top: 10%;
+    width: 100vw;
+    z-index: 0;
+    pointer-events: none;
+}
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    width: 120px;
+    height: 50px;
+    animation: float 35s linear infinite; /* Slower float */
+}
+
+/* Glass Card */
+.weather-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0.8rem 0;
+}
+
+.weather-val {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.weather-label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* Forecast Mini Cards */
+.forecast-container {
+    display: flex;
+    justify-content: center; /* Centered instead of spaced out */
+    gap: 20px; /* Tighter gap as requested */
+    margin-top: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.forecast-mini-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 90px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+.forecast-mini-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+.forecast-day {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+.forecast-temp {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+.forecast-desc {
+    font-size: 0.7rem;
+    opacity: 0.8;
+    text-transform: capitalize;
+    margin-top: 4px;
+}
+
+/* Attractive Title */
+.main-title {
+    background: linear-gradient(135deg, #fff 0%, #ff9a9e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Navbar Styling */
+.navbar-container {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-active {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ff9a9e;
+}
+
+/* Comparison Cards */
+.compare-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.compare-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.compare-card:hover {
+    transform: scale(1.05);
+}
